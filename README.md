@@ -2,12 +2,12 @@
 
 Neo4j's http endpoint produces result that contains complete query information.
 
-`parse-neo4j` helps those who only want what they've returned in the query as normal JSON.
+`neo4j-parse` helps those who only want what they've returned in the query as normal JSON.
 
 ## Install
 
 ```bash
-npm install parse-neo4j --save
+npm install neo4j-parse --save
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ var result = session
 ```
 Then you can parse the results:
 ```javascript
-var parser = require('parse-neo4j');
+var parser = require('neo4j-parse');
 var parsedResult = result
     .then(parser.parse)
     .then(function(parsed){
