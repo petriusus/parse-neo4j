@@ -1,5 +1,3 @@
-[![npm version](https://badge.fury.io/js/parse-neo4j.svg)](https://www.npmjs.com/package/parse-neo4j)
-
 # parse-neo4j
 
 Neo4j's http endpoint produces result that contains complete query information.
