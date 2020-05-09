@@ -19,21 +19,26 @@ function* enumerate(array) {
 const hasProperties = (obj) =>
   obj.properties && obj.identity && typeof obj.identity.low === "number";
 
-const parseRecord = (record) => {
+const parseRecord = (record, isArray) => {
   // If null or value
-  if (!record || typeof record !== "object") return record;
+  if (!record || typeof record !== "object") {
+    return record;
+  }
   // If it's a number
   else if (
     Object.keys(record).length === 2 &&
     typeof record.low === "number" &&
     typeof record.high === "number"
-  )
+  ) {
     if (
       (record.high === 0 && record.low >= 0) ||
       (record.high === -1 && record.low < 0)
-    )
+    ) {
       return record.low;
-    else return to64BitsIntegerString(record.high, record.low);
+    } else {
+      return to64BitsIntegerString(record.high, record.low);
+    }
+  }
   // If it's an array
   else if (typeof record["0"] !== "undefined") {
     const result = [];
@@ -48,33 +53,53 @@ const parseRecord = (record) => {
   } else {
     // It's an object by this point
     const properties = hasProperties(record) ? record.properties : record;
-    if (!record.identity && Object.keys(properties).length === 0) return [];
+    if (!record.identity && Object.keys(properties).length === 0) {
+      console.log("returning empty array, isMultiple", isArray);
+      return [];
+      //   console.log(
+      //     "array:",
+      //     isArray,
+      //     "record:",
+      //     record,
+      //     "properties:",
+      //     properties
+      //   );
+
+      //   if (isArray) {
+      //     return [];
+      //   } else {
+      //     return {};
+      //   }
+    }
+
     const result = {};
-    if (record.identity) result.id = parseRecord(record.identity);
+    if (record.identity) {
+      result.id = parseRecord(record.identity);
+    }
+
     for (let [key, value] of keyValues(properties)) {
       value = parseRecord(value);
-
-      if (value instanceof Array && value.length === 0) {
-        value = properties[key];
-      }
-
       result[key] = value;
     }
+
     return result;
   }
 };
 
 const parseNeo4jResponse = (response) => {
   const result = [];
-  for (const record of response.records)
-    if (record.length == 1) result.push(parseRecord(record._fields[0]));
-    else {
+  for (const record of response.records) {
+    if (record.length == 1) {
+      result.push(parseRecord(record._fields[0]));
+    } else {
       const parsedRecord = {};
-      for (const [index, key] of enumerate(record.keys))
+      for (const [index, key] of enumerate(record.keys)) {
         parsedRecord[key] = parseRecord(record._fields[index]);
+      }
       result.push(parsedRecord);
     }
-  return result;
+    return result;
+  }
 };
 
 const parse = (neo4jHttpResponse) => {

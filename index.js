@@ -508,313 +508,318 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
-    if (true) {
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(28), __webpack_require__(58), __webpack_require__(61)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(28), __webpack_require__(58), __webpack_require__(61)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-    } else if (typeof exports !== "undefined") {
-        factory(exports, require('babel-runtime/helpers/slicedToArray'), require('babel-runtime/regenerator'), require('./integer64'));
-    } else {
-        var mod = {
-            exports: {}
-        };
-        factory(mod.exports, global.slicedToArray, global.regenerator, global.integer64);
-        global.index = mod.exports;
-    }
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require("babel-runtime/helpers/slicedToArray"), require("babel-runtime/regenerator"), require("./integer64"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.slicedToArray, global.regenerator, global.integer64);
+    global.index = mod.exports;
+  }
 })(this, function (exports, _slicedToArray2, _regenerator, _integer) {
-    'use strict';
+  "use strict";
 
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.parseRecord = exports.parse = undefined;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.parseRecord = exports.parse = undefined;
 
-    var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+  var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
-    var _regenerator2 = _interopRequireDefault(_regenerator);
+  var _regenerator2 = _interopRequireDefault(_regenerator);
 
-    function _interopRequireDefault(obj) {
-        return obj && obj.__esModule ? obj : {
-            default: obj
-        };
-    }
-
-    var _marked = _regenerator2.default.mark(keyValues),
-        _marked2 = _regenerator2.default.mark(enumerate);
-
-    function keyValues(obj) {
-        var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, key;
-
-        return _regenerator2.default.wrap(function keyValues$(_context) {
-            while (1) switch (_context.prev = _context.next) {
-                case 0:
-                    _iteratorNormalCompletion = true;
-                    _didIteratorError = false;
-                    _iteratorError = undefined;
-                    _context.prev = 3;
-                    _iterator = Object.keys(obj)[Symbol.iterator]();
-
-                case 5:
-                    if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
-                        _context.next = 12;
-                        break;
-                    }
-
-                    key = _step.value;
-                    _context.next = 9;
-                    return [key, obj[key]];
-
-                case 9:
-                    _iteratorNormalCompletion = true;
-                    _context.next = 5;
-                    break;
-
-                case 12:
-                    _context.next = 18;
-                    break;
-
-                case 14:
-                    _context.prev = 14;
-                    _context.t0 = _context['catch'](3);
-                    _didIteratorError = true;
-                    _iteratorError = _context.t0;
-
-                case 18:
-                    _context.prev = 18;
-                    _context.prev = 19;
-
-                    if (!_iteratorNormalCompletion && _iterator.return) {
-                        _iterator.return();
-                    }
-
-                case 21:
-                    _context.prev = 21;
-
-                    if (!_didIteratorError) {
-                        _context.next = 24;
-                        break;
-                    }
-
-                    throw _iteratorError;
-
-                case 24:
-                    return _context.finish(21);
-
-                case 25:
-                    return _context.finish(18);
-
-                case 26:
-                case 'end':
-                    return _context.stop();
-            }
-        }, _marked, this, [[3, 14, 18, 26], [19,, 21, 25]]);
-    }
-
-    function enumerate(array) {
-        var index, _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, element;
-
-        return _regenerator2.default.wrap(function enumerate$(_context2) {
-            while (1) switch (_context2.prev = _context2.next) {
-                case 0:
-                    index = 0;
-                    _iteratorNormalCompletion2 = true;
-                    _didIteratorError2 = false;
-                    _iteratorError2 = undefined;
-                    _context2.prev = 4;
-                    _iterator2 = array[Symbol.iterator]();
-
-                case 6:
-                    if (_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done) {
-                        _context2.next = 14;
-                        break;
-                    }
-
-                    element = _step2.value;
-                    _context2.next = 10;
-                    return [index, element];
-
-                case 10:
-                    index++;
-
-                case 11:
-                    _iteratorNormalCompletion2 = true;
-                    _context2.next = 6;
-                    break;
-
-                case 14:
-                    _context2.next = 20;
-                    break;
-
-                case 16:
-                    _context2.prev = 16;
-                    _context2.t0 = _context2['catch'](4);
-                    _didIteratorError2 = true;
-                    _iteratorError2 = _context2.t0;
-
-                case 20:
-                    _context2.prev = 20;
-                    _context2.prev = 21;
-
-                    if (!_iteratorNormalCompletion2 && _iterator2.return) {
-                        _iterator2.return();
-                    }
-
-                case 23:
-                    _context2.prev = 23;
-
-                    if (!_didIteratorError2) {
-                        _context2.next = 26;
-                        break;
-                    }
-
-                    throw _iteratorError2;
-
-                case 26:
-                    return _context2.finish(23);
-
-                case 27:
-                    return _context2.finish(20);
-
-                case 28:
-                case 'end':
-                    return _context2.stop();
-            }
-        }, _marked2, this, [[4, 16, 20, 28], [21,, 23, 27]]);
-    }
-
-    const hasProperties = function (obj) {
-        return obj.properties && obj.identity && typeof obj.identity.low === 'number';
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
     };
+  }
 
-    const parseRecord = function (record) {
-        // If null or value
-        if (!record || typeof record !== 'object') return record;else
-            // If it's a number
-            if (Object.keys(record).length === 2 && typeof record.low === 'number' && typeof record.high === 'number') {
-                if (record.high === 0 && record.low >= 0 || record.high === -1 && record.low < 0) return record.low;else return (0, _integer.to64BitsIntegerString)(record.high, record.low);
-                // If it's an array
+  var _marked = _regenerator2.default.mark(keyValues),
+      _marked2 = _regenerator2.default.mark(enumerate);
 
-            } else if (typeof record['0'] !== 'undefined') {
-                    const result = [];
-                    let index = 0;
-                    let current = record['0'];
-                    while (typeof current !== 'undefined') {
-                        result.push(parseRecord(current));
-                        index++;
-                        current = record[String(index)];
-                    }
-                    return result;
-                } else {
-                    // It's an object by this point
-                    const properties = hasProperties(record) ? record.properties : record;
-                    if (!record.identity && Object.keys(properties).length === 0) return {};
-                    const result = {};
-                    if (record.identity) result.id = parseRecord(record.identity);
-                    var _iteratorNormalCompletion3 = true;
-                    var _didIteratorError3 = false;
-                    var _iteratorError3 = undefined;
+  function keyValues(obj) {
+    var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, key;
 
-                    try {
-                        for (var _iterator3 = keyValues(properties)[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-                            var _step3$value = (0, _slicedToArray3.default)(_step3.value, 2);
+    return _regenerator2.default.wrap(function keyValues$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _iteratorNormalCompletion = true;
+          _didIteratorError = false;
+          _iteratorError = undefined;
+          _context.prev = 3;
+          _iterator = Object.keys(obj)[Symbol.iterator]();
 
-                            let key = _step3$value[0],
-                                value = _step3$value[1];
+        case 5:
+          if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
+            _context.next = 12;
+            break;
+          }
 
-                            value = parseRecord(value);
-                            result[key] = value;
-                        }
-                    } catch (err) {
-                        _didIteratorError3 = true;
-                        _iteratorError3 = err;
-                    } finally {
-                        try {
-                            if (!_iteratorNormalCompletion3 && _iterator3.return) {
-                                _iterator3.return();
-                            }
-                        } finally {
-                            if (_didIteratorError3) {
-                                throw _iteratorError3;
-                            }
-                        }
-                    }
+          key = _step.value;
+          _context.next = 9;
+          return [key, obj[key]];
 
-                    return result;
-                }
-    };
+        case 9:
+          _iteratorNormalCompletion = true;
+          _context.next = 5;
+          break;
 
-    const parseNeo4jResponse = function (response) {
-        const result = [];
-        var _iteratorNormalCompletion4 = true;
-        var _didIteratorError4 = false;
-        var _iteratorError4 = undefined;
+        case 12:
+          _context.next = 18;
+          break;
 
-        try {
-            for (var _iterator4 = response.records[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-                const record = _step4.value;
+        case 14:
+          _context.prev = 14;
+          _context.t0 = _context["catch"](3);
+          _didIteratorError = true;
+          _iteratorError = _context.t0;
 
-                if (record.length == 1) result.push(parseRecord(record._fields[0]));else {
-                    const parsedRecord = {};
-                    var _iteratorNormalCompletion5 = true;
-                    var _didIteratorError5 = false;
-                    var _iteratorError5 = undefined;
+        case 18:
+          _context.prev = 18;
+          _context.prev = 19;
 
-                    try {
-                        for (var _iterator5 = enumerate(record.keys)[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-                            var _step5$value = (0, _slicedToArray3.default)(_step5.value, 2);
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+          }
 
-                            const index = _step5$value[0],
-                                  key = _step5$value[1];
+        case 21:
+          _context.prev = 21;
 
-                            parsedRecord[key] = parseRecord(record._fields[index]);
-                        }
-                    } catch (err) {
-                        _didIteratorError5 = true;
-                        _iteratorError5 = err;
-                    } finally {
-                        try {
-                            if (!_iteratorNormalCompletion5 && _iterator5.return) {
-                                _iterator5.return();
-                            }
-                        } finally {
-                            if (_didIteratorError5) {
-                                throw _iteratorError5;
-                            }
-                        }
-                    }
+          if (!_didIteratorError) {
+            _context.next = 24;
+            break;
+          }
 
-                    result.push(parsedRecord);
-                }
+          throw _iteratorError;
+
+        case 24:
+          return _context.finish(21);
+
+        case 25:
+          return _context.finish(18);
+
+        case 26:
+        case "end":
+          return _context.stop();
+      }
+    }, _marked, this, [[3, 14, 18, 26], [19,, 21, 25]]);
+  }
+
+  function enumerate(array) {
+    var index, _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, element;
+
+    return _regenerator2.default.wrap(function enumerate$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          index = 0;
+          _iteratorNormalCompletion2 = true;
+          _didIteratorError2 = false;
+          _iteratorError2 = undefined;
+          _context2.prev = 4;
+          _iterator2 = array[Symbol.iterator]();
+
+        case 6:
+          if (_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done) {
+            _context2.next = 14;
+            break;
+          }
+
+          element = _step2.value;
+          _context2.next = 10;
+          return [index, element];
+
+        case 10:
+          index++;
+
+        case 11:
+          _iteratorNormalCompletion2 = true;
+          _context2.next = 6;
+          break;
+
+        case 14:
+          _context2.next = 20;
+          break;
+
+        case 16:
+          _context2.prev = 16;
+          _context2.t0 = _context2["catch"](4);
+          _didIteratorError2 = true;
+          _iteratorError2 = _context2.t0;
+
+        case 20:
+          _context2.prev = 20;
+          _context2.prev = 21;
+
+          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+            _iterator2.return();
+          }
+
+        case 23:
+          _context2.prev = 23;
+
+          if (!_didIteratorError2) {
+            _context2.next = 26;
+            break;
+          }
+
+          throw _iteratorError2;
+
+        case 26:
+          return _context2.finish(23);
+
+        case 27:
+          return _context2.finish(20);
+
+        case 28:
+        case "end":
+          return _context2.stop();
+      }
+    }, _marked2, this, [[4, 16, 20, 28], [21,, 23, 27]]);
+  }
+
+  const hasProperties = function (obj) {
+    return obj.properties && obj.identity && typeof obj.identity.low === "number";
+  };
+
+  const parseRecord = function (record) {
+    // If null or value
+    if (!record || typeof record !== "object") return record;
+    // If it's a number
+    else if (Object.keys(record).length === 2 && typeof record.low === "number" && typeof record.high === "number") {
+        if (record.high === 0 && record.low >= 0 || record.high === -1 && record.low < 0) return record.low;else return (0, _integer.to64BitsIntegerString)(record.high, record.low);
+        // If it's an array
+
+      } else if (typeof record["0"] !== "undefined") {
+          const result = [];
+          let index = 0;
+          let current = record["0"];
+          while (typeof current !== "undefined") {
+            result.push(parseRecord(current));
+            index++;
+            current = record[String(index)];
+          }
+          return result;
+        } else {
+          // It's an object by this point
+          const properties = hasProperties(record) ? record.properties : record;
+          if (!record.identity && Object.keys(properties).length === 0) return [];
+          const result = {};
+          if (record.identity) result.id = parseRecord(record.identity);
+          var _iteratorNormalCompletion3 = true;
+          var _didIteratorError3 = false;
+          var _iteratorError3 = undefined;
+
+          try {
+            for (var _iterator3 = keyValues(properties)[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+              var _step3$value = (0, _slicedToArray3.default)(_step3.value, 2);
+
+              let key = _step3$value[0],
+                  value = _step3$value[1];
+
+              value = parseRecord(value);
+
+              if (value instanceof Array && value.length === 0) {
+                value = properties[key];
+              }
+
+              result[key] = value;
             }
-        } catch (err) {
-            _didIteratorError4 = true;
-            _iteratorError4 = err;
-        } finally {
+          } catch (err) {
+            _didIteratorError3 = true;
+            _iteratorError3 = err;
+          } finally {
             try {
-                if (!_iteratorNormalCompletion4 && _iterator4.return) {
-                    _iterator4.return();
-                }
+              if (!_iteratorNormalCompletion3 && _iterator3.return) {
+                _iterator3.return();
+              }
             } finally {
-                if (_didIteratorError4) {
-                    throw _iteratorError4;
-                }
+              if (_didIteratorError3) {
+                throw _iteratorError3;
+              }
             }
+          }
+
+          return result;
         }
+  };
 
-        return result;
-    };
+  const parseNeo4jResponse = function (response) {
+    const result = [];
+    var _iteratorNormalCompletion4 = true;
+    var _didIteratorError4 = false;
+    var _iteratorError4 = undefined;
 
-    const parse = function (neo4jHttpResponse) {
-        try {
-            return parseNeo4jResponse(neo4jHttpResponse);
-        } catch (error) {
-            throw new Error(`Parse error: ${error.message}`);
+    try {
+      for (var _iterator4 = response.records[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+        const record = _step4.value;
+
+        if (record.length == 1) result.push(parseRecord(record._fields[0]));else {
+          const parsedRecord = {};
+          var _iteratorNormalCompletion5 = true;
+          var _didIteratorError5 = false;
+          var _iteratorError5 = undefined;
+
+          try {
+            for (var _iterator5 = enumerate(record.keys)[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+              var _step5$value = (0, _slicedToArray3.default)(_step5.value, 2);
+
+              const index = _step5$value[0],
+                    key = _step5$value[1];
+
+              parsedRecord[key] = parseRecord(record._fields[index]);
+            }
+          } catch (err) {
+            _didIteratorError5 = true;
+            _iteratorError5 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion5 && _iterator5.return) {
+                _iterator5.return();
+              }
+            } finally {
+              if (_didIteratorError5) {
+                throw _iteratorError5;
+              }
+            }
+          }
+
+          result.push(parsedRecord);
         }
-    };
+      }
+    } catch (err) {
+      _didIteratorError4 = true;
+      _iteratorError4 = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion4 && _iterator4.return) {
+          _iterator4.return();
+        }
+      } finally {
+        if (_didIteratorError4) {
+          throw _iteratorError4;
+        }
+      }
+    }
 
-    exports.parse = parse;
-    exports.parseRecord = parseRecord;
+    return result;
+  };
+
+  const parse = function (neo4jHttpResponse) {
+    try {
+      return parseNeo4jResponse(neo4jHttpResponse);
+    } catch (error) {
+      throw new Error(`Parse error: ${error.message}`);
+    }
+  };
+
+  exports.parse = parse;
+  exports.parseRecord = parseRecord;
 });
 
 /***/ }),
