@@ -1,6 +1,6 @@
 {
   "name": "parse-neo4j",
-  "version": "0.6.11",
+  "version": "0.6.12",
   "description": "Parse results from neo4j's http endpoint to normal JSON",
   "main": "index.js",
   "jsnext:main": "./src/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:assister-ai/parse-neo4j.git"
+    "url": "git@github.com/petriusus/parse-neo4j.git"
   },
   "keywords": [
     "endpoint",
